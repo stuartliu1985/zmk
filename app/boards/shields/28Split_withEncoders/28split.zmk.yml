@@ -1,0 +1,14 @@
+file_format: "1"
+id: 28split
+name: 28Split
+type: shield
+url: 
+requires: [pro_micro]
+exposes: [GPIO]
+features:
+  - keys
+//  - display
+//  - underglow
+siblings:
+  - 28split_left
+  - 28split_right
