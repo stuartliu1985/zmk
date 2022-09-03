@@ -21,16 +21,16 @@
 
                 default_layer {
 // ---------------------------------------------------------------------------------------------
-// |Q    |W    |E         |R      |T      |  |Y   |U               |I         |O         |P        |
-// |A    |S    |D         |F      |G      |  |H   |J               |K         |L         |ENT      |
-// |Z    |X    |C         |V      |ENCODER|       |SPC             |B         |N         |M        |
+// |Q    |W             |E         |R      |T     |  |Y    |U               |I(LA)     |O(LGUI)   |P        |
+// |A    |S(LA(LGUI))   |D         |F      |G     |  |H    |J(LC)           |K         |L(LT4)    |ENT(LT3) |
+// |Z    |X             |C(LGUI)   |V(LT1) |NONE  |        |SPC(LS)         |B(LT2)    |N(LT1)    |M        |
                         bindings = <
-   &kp Q  &kp W &kp E      &kp R   &kp T    &kp Y &kp U            &mt LALT I &mt RGUI O &lt 5 P
-   &kp A  &kp S &kp D      &kp F   &kp G    &kp H &mt LCTRL J      &kp K      &lt 4 L    &lt 3 RET
-   &kp Z  &kp X &mt LGUI C &lt 1 V &kp C_PP       &mt LSHIFT SPACE &lt 2 B    &lt 1 N    &kp M
+   &kp Q  &kp W          &kp E      &kp R   &kp T     &kp Y &kp U            &mt LALT I &mt RGUI O &kp P
+   &kp A  &mt LA(LGUI) S &kp D      &kp F   &kp G     &kp H &mt LCTRL J      &kp K      &lt 4 L    &lt 3 RET
+   &kp Z  &kp X          &mt LGUI C &lt 1 V &none           &mt LSHIFT SPACE &lt 2 B    &lt 1 N    &kp M
                         >;
 
-			sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
+			//sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
                 };
                 lower_layer {
 // -------------------------------------------------------------------------------------------------------------
@@ -43,7 +43,7 @@
    &kp LSHIFT &none   &out OUT_USB  &kp LG(F11)  &none                  &kp HOME &kp COMMA &kp DOT    &kp SLASH
                         >;
 
-			//sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
+			//sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
                 };
                 raise_layer {
 // -----------------------------------------------------------------------------------------------
@@ -61,11 +61,11 @@
                 adjust_layer {
 // --------------------------------------------------------------------------------------------------------------------------
 // |BT 1       |BT 2        |BT 3        |P+          |P*            ||P1       |P2       |P3       |P0        |TAB         |
-// |BT CLR     |NONE        |NONE        |P-          |P/            ||P4       |P5       |P6       |P.        |NONE        |
+// |BT CLR     |BT 0        |BT 4        |P-          |P/            ||P4       |P5       |P6       |P.        |NONE        |
 // |NONE       |NONE        |NONE        |NONE        |                         |P7       |P8       |P9        |P=          |
                         bindings = <
    &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp KP_PLUS  &kp KP_MULTIPLY &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N0  &kp TAB
-   &bt BT_CLR   &none        &none        &kp KP_MINUS &kp KP_SLASH    &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_DOT &none
+   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 4 &kp KP_MINUS &kp KP_SLASH    &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_DOT &none
    &none        &none        &none        &none        &none                     &kp KP_N7 &kp KP_N8 &kp KP_N9  &kp KP_EQUAL
                         >;
 
@@ -73,12 +73,12 @@
                 };
                 scroll_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------
-// |LGUI+F13  |Win_Up          |Win_Left         |Win_TopLeft  |Win_TopRight||MENU      |Grab full        |Grab part        |Sort by name     |NONE |
-// |NONE      |Win_Down        |Win_Right        |Win_BotLeft  |Win_BotRight||UNDO      |SAVE             |Select all       |NONE             |NONE |
-// |NONE      |NONE            |NONE             |NONE         |NONE                    |COPY             |PASTE            |New              |NONE |
+// |LGUI+F13  |Win_Up          |Win_Left         |Win_TopLeft  |Win_TopRight||MENU      |Grab full        |Grab part        |Sort by name     |Finder Delete     |
+// |NONE      |Win_Down        |Win_Right        |Win_BotLeft  |Win_BotRight||UNDO      |SAVE             |Select all       |NONE             |Finder Empty Trash|
+// |NONE      |NONE            |NONE             |NONE         |NONE                    |COPY             |PASTE            |New              |NONE              |
                         bindings = <
-   &kp LG(F13) &kp LC(LA(UP))   &kp LC(LA(LEFT))  &kp LC(LA(U)) &kp LC(LA(I)) &kp LC(F2) &kp LS(LG(N3)) &kp LS(LG(N4)) &kp LA(LG(N1)) &none
-   &none       &kp LC(LA(DOWN)) &kp LC(LA(RIGHT)) &kp LC(LA(J)) &kp LC(LA(K)) &kp LG(Z)  &kp LG(S)         &kp LG(A)         &none             &none 
+   &kp LG(F13) &kp LC(LA(UP))   &kp LC(LA(LEFT))  &kp LC(LA(U)) &kp LC(LA(I)) &kp LC(F2) &kp LS(LG(N3))    &kp LS(LG(N4))    &kp LA(LG(N1))    &kp LG(BSPC)
+   &none       &kp LC(LA(DOWN)) &kp LC(LA(RIGHT)) &kp LC(LA(J)) &kp LC(LA(K)) &kp LG(Z)  &kp LG(S)         &kp LG(A)         &none             &kp LS(LG(BSPC)) 
    &none       &none            &none             &none         &none                    &kp LG(C)         &kp LG(V)         &kp LG(N)         &none
                         >;
 

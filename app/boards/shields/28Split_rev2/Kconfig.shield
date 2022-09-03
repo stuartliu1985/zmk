@@ -1,0 +1,21 @@
+# Copyright (c) 2022 Stuart LIU
+# SPDX-License-Identifier: MIT
+
+config SHIELD_28SPLIT
+    bool
+
+config SHIELD_28SPLIT_LEFT
+	def_bool $(shields_list_contains,28split_left)
+	select SHIELD_28SPLIT
+
+config SHIELD_28SPLIT_RIGHT
+	def_bool $(shields_list_contains,28split_right)
+	select SHIELD_28SPLIT
+
+config SHIELD_28SPLIT_REV2_LEFT
+	def_bool $(shields_list_contains,28split_rev2_left)
+	select SHIELD_28SPLIT
+
+config SHIELD_28SPLIT_REV2_RIGHT
+	def_bool $(shields_list_contains,28split_rev2_right)
+	select SHIELD_28SPLIT

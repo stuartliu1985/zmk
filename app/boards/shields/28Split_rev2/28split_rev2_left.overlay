@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "28split.dtsi"
+#include "28split_rev2.dtsi"
 
 &kscan0 {
     col-gpios
@@ -16,6 +16,6 @@
         ;
 };
 
-&left_encoder {
-        status = "okay";
-};
+//&left_encoder {
+//    status = "okay";
+//};

@@ -77,8 +77,8 @@
 // |NONE      |Win_Down        |Win_Right        |Win_BotLeft  |Win_BotRight||UNDO      |SAVE             |Select all       |NONE             |Finder Empty Trash|
 // |NONE      |NONE            |NONE             |NONE         |NONE                    |COPY             |PASTE            |New              |NONE              |
                         bindings = <
-   &kp LG(F13) &kp LC(LA(UP))   &kp LC(LA(LEFT))  &kp LC(LA(U)) &kp LC(LA(I)) &kp LC(F2) &kp LS(LG(N3))    &kp LS(LG(N4))    &kp LA(LG(N1))    &none
-   &none       &kp LC(LA(DOWN)) &kp LC(LA(RIGHT)) &kp LC(LA(J)) &kp LC(LA(K)) &kp LG(Z)  &kp LG(S)         &kp LG(A)         &none             &none 
+   &kp LG(F13) &kp LC(LA(UP))   &kp LC(LA(LEFT))  &kp LC(LA(U)) &kp LC(LA(I)) &kp LC(F2) &kp LS(LG(N3))    &kp LS(LG(N4))    &kp LA(LG(N1))    &kp LG(BSPC)
+   &none       &kp LC(LA(DOWN)) &kp LC(LA(RIGHT)) &kp LC(LA(J)) &kp LC(LA(K)) &kp LG(Z)  &kp LG(S)         &kp LG(A)         &none             &kp LS(LG(BSPC)) 
    &none       &none            &none             &none         &none                    &kp LG(C)         &kp LG(V)         &kp LG(N)         &none
                         >;
 
@@ -86,6 +86,3 @@
                 };
       };
 };
-
-//Line80   &kp LG(F13) &kp LC(LA(UP))   &kp LC(LA(LEFT))  &kp LC(LA(U)) &kp LC(LA(I)) &kp LC(F2) &kp LS(LG(N3))    &kp LS(LG(N4))    &kp LA(LG(N1))    &kp LG(BSPC)
-//Line81   &none       &kp LC(LA(DOWN)) &kp LC(LA(RIGHT)) &kp LC(LA(J)) &kp LC(LA(K)) &kp LG(Z)  &kp LG(S)         &kp LG(A)         &none             &kp LS(LG(BSPC)) 
