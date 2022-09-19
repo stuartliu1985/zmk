@@ -1,0 +1,9 @@
+file_format: "1"
+id: 28uni
+name: 28Uni
+type: shield
+url: 
+requires: [pro_micro]
+exposes: [GPIO]
+features:
+  - keys

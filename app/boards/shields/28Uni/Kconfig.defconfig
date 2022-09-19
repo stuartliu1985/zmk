@@ -1,0 +1,6 @@
+if SHIELD_28UNI
+
+config ZMK_KEYBOARD_NAME
+    default "28Uni"
+
+endif
